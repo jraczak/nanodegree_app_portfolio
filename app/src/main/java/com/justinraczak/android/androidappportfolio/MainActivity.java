@@ -20,16 +20,22 @@ implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Get a reference to the RelativeLayout container view
         ViewGroup containerGroup = (ViewGroup)findViewById(R.id.container);
+        // Make sure all the buttons respond to clicks
         setButtonListeners(containerGroup);
 
     }
 
 
     private void setButtonListeners(ViewGroup v) {
+        // Set up the loop
         for (int i = 0; i < v.getChildCount(); i++) {
+            // Get a reference to the child at the current index of i
             View child = v.getChildAt(i);
+            // Check if the child is a Button
             if (child instanceof Button) {
+                // Set the listener on the button
                 child.setOnClickListener(this);
                 Log.d("Button setup", "Successfully set " + ((Button) child).getText().toString() + " button listener.");
             }
@@ -37,7 +43,9 @@ implements View.OnClickListener {
     }
 
     public void onClick(View v) {
+        // Cast the view to a Button instance
         Button b = (Button)v;
+        // Display the project name to be launched
         Toast.makeText(MainActivity.this,
                 "This will launch " + b.getText().toString(),
                 Toast.LENGTH_SHORT)
