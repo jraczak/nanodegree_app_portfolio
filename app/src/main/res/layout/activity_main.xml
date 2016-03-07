@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:id="@+id/title_apps_list"
+        style="@style/TitleFont"
+        android:text="@string/title_apps_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/button_app_spotify_streamer"
+        style="@style/ProjectButton"
+        android:text="@string/app_title_spotify_streamer"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_apps_list"/>
+
+    <Button android:id="@+id/button_app_scores_app"
+        style="@style/ProjectButton"
+        android:text="@string/app_title_scores_app"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_app_spotify_streamer"/>
+
+    <Button android:id="@+id/button_app_library_app"
+        style="@style/ProjectButton"
+        android:text="@string/app_title_library_app"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_app_scores_app"/>
+
+    <Button android:id="@+id/button_app_build_it_bigger"
+        style="@style/ProjectButton"
+        android:text="@string/app_title_build_it_bigger"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_app_library_app"/>
+
+    <Button android:id="@+id/button_app_xyz_reader"
+        style="@style/ProjectButton"
+        android:text="@string/app_title_xyz_reader"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_app_build_it_bigger"/>
+
+    <Button android:id="@+id/button_app_capstone"
+        style="@style/ProjectButton"
+        android:text="@string/app_title_capstone"
+        android:background="@color/accent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_app_xyz_reader"/>
+
+</RelativeLayout>
